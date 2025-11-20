@@ -38,8 +38,10 @@ def to_little_endian(string_32: bytes) -> bytes:
         raise ValueError("Input must be of length 32")
 
     little_endian = b""
+
     for i in [3, 2, 1, 0]:
         little_endian += string_32[8 * i : 8 * i + 8]
+
     return little_endian
 
 

@@ -40,6 +40,7 @@ def is_palindrome(head: ListNode | None) -> bool:
     # split the list to two parts
     fast: ListNode | None = head.next_node
     slow: ListNode | None = head
+
     while fast and fast.next_node:
         fast = fast.next_node.next_node
         slow = slow.next_node if slow else None
@@ -48,6 +49,7 @@ def is_palindrome(head: ListNode | None) -> bool:
         # adding this check to resolve mypy static check
         second = slow.next_node
         slow.next_node = None  # Don't forget here! But forget still works!
+
     # reverse the second part
     node: ListNode | None = None
     while second:
@@ -55,6 +57,7 @@ def is_palindrome(head: ListNode | None) -> bool:
         second.next_node = node
         node = second
         second = nxt
+
     # compare two parts
     # second part has the same or one less node
     while node and head:
@@ -167,6 +170,7 @@ def is_palindrome_dict(head: ListNode | None) -> bool:
         pos += 1
     checksum = pos - 1
     middle = 0
+
     for v in d.values():
         if len(v) % 2 != 0:
             middle += 1
@@ -176,6 +180,7 @@ def is_palindrome_dict(head: ListNode | None) -> bool:
                     return False
         if middle > 1:
             return False
+
     return True
 
 

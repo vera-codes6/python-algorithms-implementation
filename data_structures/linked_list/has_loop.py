@@ -49,6 +49,7 @@ if __name__ == "__main__":
     root_node.next_node.next_node = Node(3)
     root_node.next_node.next_node.next_node = Node(4)
     print(root_node.has_loop)  # False
+
     root_node.next_node.next_node.next_node = root_node.next_node
     print(root_node.has_loop)  # True
 

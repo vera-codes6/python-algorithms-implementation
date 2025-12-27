@@ -38,6 +38,8 @@ def binary_count_trailing_zeros(a: int) -> int:
     return 0 if (a == 0) else int(log2(a & -a))
 
 
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()

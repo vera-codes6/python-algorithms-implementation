@@ -23,6 +23,7 @@ def binary_coded_decimal(number: int) -> str:
     )
 
 
+
 if __name__ == "__main__":
     import doctest
 

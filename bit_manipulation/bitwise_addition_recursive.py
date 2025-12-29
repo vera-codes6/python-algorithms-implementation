@@ -4,8 +4,6 @@ Wikipedia explanation: https://en.wikipedia.org/wiki/Binary_number
 """
 
 
-
-
 def bitwise_addition_recursive(number: int, other_number: int) -> int:
     """
     >>> bitwise_addition_recursive(4, 5)

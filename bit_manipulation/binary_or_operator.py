@@ -17,6 +17,10 @@ def binary_or(a: int, b: int) -> str:
     >>> binary_or(0, 255)
     '0b11111111'
     >>> binary_or(0, 256)
+
+
+
+
     '0b100000000'
     >>> binary_or(0, -1)
     Traceback (most recent call last):
@@ -40,6 +44,21 @@ def binary_or(a: int, b: int) -> str:
         str(int("1" in (char_a, char_b)))
         for char_a, char_b in zip(a_binary.zfill(max_len), b_binary.zfill(max_len))
     )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":

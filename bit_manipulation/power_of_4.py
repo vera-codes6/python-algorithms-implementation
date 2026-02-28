@@ -15,6 +15,7 @@ and the set bit should be at an odd position.
 """
 
 
+
 def power_of_4(number: int) -> bool:
     """
     Return True if this number is power of 4 or False otherwise.

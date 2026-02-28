@@ -23,8 +23,10 @@ def get_reverse_bit_string(number: int) -> str:
         raise TypeError(msg)
     bit_string = ""
     for _ in range(32):
-        bit_string += str(number % 2)
-        number >>= 1
+        bit_string = bit_string + str(number % 2)
+        number = number >> 1
+
+
     return bit_string
 
 

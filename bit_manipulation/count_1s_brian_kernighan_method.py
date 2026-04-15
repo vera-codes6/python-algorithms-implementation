@@ -31,7 +31,7 @@ def get_1s_count(number: int) -> int:
         raise ValueError("Input must be a non-negative integer")
 
     count = 0
-    while number != 0:
+    while number:
         # This way we arrive at next set bit (next 1) instead of looping
         # through each bit and checking for 1s hence the
         # loop won't run 32 times it will only run the number of `1` times

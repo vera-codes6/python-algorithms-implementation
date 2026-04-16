@@ -43,8 +43,10 @@ def swap_odd_even_bits(num: int) -> int:
     # Get all even bits - 0xAAAAAAAA is a 32-bit number with all even bits set to 1
     even_bits = num & 0xAAAAAAAA
 
+
     # Get all odd bits - 0x55555555 is a 32-bit number with all odd bits set to 1
     odd_bits = num & 0x55555555
+
 
     # Right shift even bits and left shift odd bits and swap them
     return even_bits >> 1 | odd_bits << 1

@@ -42,6 +42,7 @@ def binary_xor(a: int, b: int) -> str:
 
     return "0b" + "".join(
         str(int(char_a != char_b))
+
         for char_a, char_b in zip(a_binary.zfill(max_len), b_binary.zfill(max_len))
     )
 

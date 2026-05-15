@@ -30,6 +30,7 @@ def time_func(func, *args, **kwargs):
     start = time()
     output = func(*args, **kwargs)
     end = time()
+    
     if int(end - start) > 0:
         print(f"{func.__name__} runtime: {(end - start):0.4f} s")
     else:

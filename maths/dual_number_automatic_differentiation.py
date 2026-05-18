@@ -25,6 +25,8 @@ class Dual:
         while cur[-1] == 0:
             cur.pop(-1)
         return Dual(self.real, cur)
+    
+
 
     def __add__(self, other):
         if not isinstance(other, Dual):
@@ -39,6 +41,8 @@ class Dual:
         for i in range(len(s_dual)):
             new_duals.append(s_dual[i] + o_dual[i])
         return Dual(self.real + other.real, new_duals)
+    
+    
 
     __radd__ = __add__
 

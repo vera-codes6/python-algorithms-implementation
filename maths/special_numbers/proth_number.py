@@ -50,6 +50,7 @@ def proth(number: int) -> int:
         proth_list = [3, 5]
         proth_index = 2
         increment = 3
+        
         for block in range(1, block_index):
             for _ in range(increment):
                 proth_list.append(2 ** (block + 1) + proth_list[proth_index - 1])

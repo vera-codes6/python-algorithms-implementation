@@ -36,6 +36,7 @@ def is_happy_number(number: int) -> bool:
         raise ValueError(msg)
 
     seen = set()
+    
     while number != 1 and number not in seen:
         seen.add(number)
         number = sum(int(digit) ** 2 for digit in str(number))

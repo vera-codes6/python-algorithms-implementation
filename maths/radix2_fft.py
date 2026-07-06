@@ -70,8 +70,10 @@ class FFT:
 
         while len(self.polyA) < self.c_max_length:
             self.polyA.append(0)
+
         while len(self.polyB) < self.c_max_length:
             self.polyB.append(0)
+
         # A complex root used for the fourier transform
         self.root = complex(mpmath.root(x=1, n=self.c_max_length, k=1))
 

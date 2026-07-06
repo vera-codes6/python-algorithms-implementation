@@ -46,6 +46,7 @@ def sieve(n: int) -> list[int]:
             for i in range(start * start, end + 1, start):
                 temp[i] = False
         start += 1
+        
     prime += in_prime
 
     low = end + 1

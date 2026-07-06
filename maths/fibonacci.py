@@ -30,7 +30,7 @@ def time_func(func, *args, **kwargs):
     start = time()
     output = func(*args, **kwargs)
     end = time()
-    
+
     if int(end - start) > 0:
         print(f"{func.__name__} runtime: {(end - start):0.4f} s")
     else:
@@ -126,6 +126,7 @@ def fib_recursive(n: int) -> list[int]:
             raise ValueError("n is negative")
         if i < 2:
             return i
+
         return fib_recursive_term(i - 1) + fib_recursive_term(i - 2)
 
     if n < 0:
@@ -157,6 +158,7 @@ def fib_recursive_cached(n: int) -> list[int]:
         """
         if i < 0:
             raise ValueError("n is negative")
+
         if i < 2:
             return i
         return fib_recursive_term(i - 1) + fib_recursive_term(i - 2)
@@ -268,6 +270,7 @@ def matrix_pow_np(m: ndarray, power: int) -> ndarray:
         ...
     ValueError: power is negative
     """
+
     result = np.array([[1, 0], [0, 1]], dtype=int)  # Identity Matrix
     base = m
     if power < 0:  # Negative power is not allowed
